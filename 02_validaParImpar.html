@@ -3,9 +3,19 @@
     /*
     //PROBLEMA: Faça um script que peça um número inteiro e determine se ele é par ou ímpar.
     */
-
+    const num= Number(prompt(`Informe um número inteiro`).trim())
     //ENTRADA
-
+    switch (num % 2) {
+        case 0: 
+            alert(`O número ${num} é par.`)
+            break;
+        case 1:
+            alert(`O número ${num} é ímpar.`)
+            break;
+        default:
+            alert(`Valor inválido.`)
+            break;
+    }
     
     //PROCESSAMENTO
 

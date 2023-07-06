@@ -9,6 +9,72 @@
     - "Já trabalhou com a vítima?"
     O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
     */
+    const tel = prompt(`Telefonou para a vítima? Use S(sim) e N.(não)`).trim().toLowerCase()
+    const loc = prompt(`Esteve no local do crime? Use S(sim) e N.(não)`).trim().toLowerCase()
+    const mora = prompt(`Mora perto da vítima? Use S(sim) e N.(não)`).trim().toLowerCase()
+    const dev = prompt(`Devia para a vítima? Use S(sim) e N.(não)`).trim().toLowerCase()
+    const trab = prompt(`Já trabalhou com a vítima? Use S(sim) e N.(não)`).trim().toLowerCase()
+    let mensagemmfi= `Você é`
+    let resultado=0
+
+    switch (tel) {
+        case "s":
+            resultado+=1
+            break;
+        default:
+            resultado+=0
+            break;
+    }
+    switch (loc) {
+        case "s":
+            resultado+=1
+            break;
+        default:
+            resultado+=0
+            break;
+    }
+    switch (mora) {
+        case "s":
+            resultado+=1
+            break;
+        default:
+            resultado+=0
+            break;
+    }
+    switch (dev) {
+        case "s":
+            resultado+=1
+            break;
+        default:
+            resultado+=0
+            break;
+    }
+    switch (trab) {
+        case "s":
+            resultado+=1
+            break;
+        default:
+            resultado+=0
+            break;
+    }
+    switch(resultado){
+        case 2:
+            mensagemmfi+= ` suspeito`
+            break;
+        case 3:
+        case 4: 
+        mensagemmfi+= ` cúmplice`
+        break;
+        case 5:
+        mensagemmfi+= ` assassino`
+        break;
+        default:
+        mensagemmfi+= ` inocente`
+        break;
+    }
+alert(mensagemmfi)
+
+
 
     //ENTRADA
 
