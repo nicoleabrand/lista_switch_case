@@ -6,8 +6,60 @@
     */
 
     //ENTRADA
-
-    
+    const hemisferio = prompt(`Informe em que hemisfério você está`).trim().toLowerCase()
+    const mes = Number(prompt(`Informe em que mês você está. Utilize 1(janeiro), 2(fevereiro), 3(março), 4(abril), 5(maio), 6(junho), 7(julho), 8(agosto), 9(setembro), 10(outubro), 11(novembro) e 12(dezembro)`).trim())
+    switch (hemisferio) {
+        case "s":
+            switch (mes) {
+                case 1:
+                case 2:
+                case 3:
+                    alert(`Verao`)
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    alert(`Outono`)
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    alert(`Inverno`)
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    alert(`Primavera`)
+                    break;
+            }
+            break;
+    }
+    switch (hemisferio) {
+        case "n":
+            switch (mes) {
+                case 1:
+                case 2:
+                case 3:
+                    alert(`Inverno`)
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    alert(`Primavera`)
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    alert(`Verao`)
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    alert(`Primavera`)
+                    break;
+            }
+        break
+    }
     //PROCESSAMENTO
 
 
